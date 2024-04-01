@@ -15,6 +15,8 @@ $(() => {
     getWeather(latitude, longitude)
   }
 
+  // getWeather(0, 0)
+
   //if geolocation wasnt used
   function getCoordsFromUser() {
 
@@ -38,7 +40,7 @@ $(() => {
     $("#header").show()
     $("#content").show()
 
-    $("#header").text(`It's currently ${weather.current.temperature_2m}${weather.current_units.temperature_2m} and ${outlook} in your location`)
+    $("#header").text(`It's ${weather.current.temperature_2m}${weather.current_units.temperature_2m} and ${outlook}`)
     $("#high").text(`${weather.daily.temperature_2m_max[0]}${weather.current_units.temperature_2m}`)
     $("#low").text(`${weather.daily.temperature_2m_min[0]}${weather.current_units.temperature_2m}`)
 
