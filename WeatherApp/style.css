@@ -1,0 +1,13 @@
+* {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+td {
+  text-align: left;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
