@@ -33,6 +33,11 @@ $(() => {
   //add the data to the page
   function updatePage(weather) {
     outlook = lookupWeatherCode(weather.current.weather_code)
+
+    $("#nogeo").hide()
+    $("#header").show()
+    $("#content").show()
+
     $("#header").text(`It's currently ${weather.current.temperature_2m}${weather.current_units.temperature_2m} and ${outlook} in your location`)
     $("#high").text(`${weather.daily.temperature_2m_max[0]}${weather.current_units.temperature_2m}`)
     $("#low").text(`${weather.daily.temperature_2m_min[0]}${weather.current_units.temperature_2m}`)

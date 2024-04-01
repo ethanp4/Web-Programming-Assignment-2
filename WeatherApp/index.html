@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Weather in {name}</title>
+  <title>Weather</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
@@ -10,8 +10,9 @@
 </head>
 
 <body>
-  <h1 id="header"></h1>
-  <div id="content">
+  <div id="nogeo">This website only works using your browsers geolocation</div>
+  <h1 hidden id="header"></h1>
+  <div hidden id="content">
     <table id="table">
       <tr>
         <td>High ♨️</td>
@@ -32,7 +33,6 @@
 
     </table>
   </div>
-
 </body>
 
 </html>
