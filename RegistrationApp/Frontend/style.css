@@ -1,0 +1,14 @@
+* {
+  font-family: "Fira Sans", sans-serif;
+  /* text-align: center; */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+#userInput {
+  display: flex;
+  justify-content: center;
+}
+
+#result {
+  text-align: right;
+}
