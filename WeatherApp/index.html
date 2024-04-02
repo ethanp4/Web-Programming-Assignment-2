@@ -11,7 +11,17 @@
 </head>
 
 <body>
-  <div id="nogeo">Getting weather info...</div>
+  <div id="userInput">
+    <form id="cityForm" style="display: inline;">
+      <td><input required id="cityInput" type="text" placeholder="Enter a city"></td>
+      <td><button id="setLocation">Set location</button></td>
+    </form>
+    <td><button id="resetLocation">Reset Location</button></td>
+    <div style="font-size: smaller;" id="locationStatus"></div>
+    <button style="margin-top: 5px" id="getWeather">Get weather</button>
+    <label title="Go directly to weather page on refresh" style="font-size: smaller;" for="alwaysShowWeather">Skip this
+      page next time</label><input id="alwaysShowWeather" type="checkbox">
+  </div>
   <h1 hidden id="header"></h1>
   <div hidden id="content">
     <table id="table">
@@ -33,6 +43,7 @@
       </tr>
 
     </table>
+    <button style="margin-top: 50px;" id="changeCity">Change city</button>
   </div>
 </body>
 
