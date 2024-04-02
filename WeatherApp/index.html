@@ -4,6 +4,13 @@
 <head>
   <title>Weather</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
@@ -11,6 +18,7 @@
 </head>
 
 <body>
+  <!-- all userinput stuff is here -->
   <div id="userInput">
     <form id="cityForm" style="display: inline;">
       <td><input required id="cityInput" type="text" placeholder="Enter a city"></td>
@@ -22,6 +30,10 @@
     <label title="Go directly to weather page on refresh" style="font-size: smaller;" for="alwaysShowWeather">Skip this
       page next time</label><input id="alwaysShowWeather" type="checkbox">
   </div>
+
+  <div hidden id="status"></div>
+
+  <!-- below this is displayed on the weather page -->
   <h1 hidden id="header"></h1>
   <div hidden id="content">
     <table id="table">
@@ -43,7 +55,7 @@
       </tr>
 
     </table>
-    <button style="margin-top: 50px;" id="changeCity">Change city</button>
+    <button style="margin-top: 30px;" id="changeCity">Change city</button>
   </div>
 </body>
 
