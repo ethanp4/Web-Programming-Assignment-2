@@ -14,7 +14,7 @@ $(() => {
 
     $.ajax({
       type: "POST",
-      url: "http://localhost:7000/submitForm",
+      url: "https://web-programming-assignment-2.onrender.com/registerUser/submitForm",
       data: {
         id: id,
         fullName: fullName,
