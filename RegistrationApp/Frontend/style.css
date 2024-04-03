@@ -10,5 +10,12 @@
 }
 
 #result {
-  text-align: right;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+
+}
+
+#return {
+  text-align: center;
 }

@@ -16,8 +16,16 @@ const submitForm = async (req, res) => {
     case "volunteer":
       fee = 0
       break
+    default:
+      fee = -10
   }
-  res.json(`${fullName} registered! Your fee is $${fee}.`)
+
+  if (fee == -10) {
+    res.json("No status has been selected")
+  } else {
+    res.json(`${fullName} registered! Your fee is $${fee}.`)
+  }
+
 }
 
 module.exports = { submitForm }

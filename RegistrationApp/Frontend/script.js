@@ -7,6 +7,9 @@ $(() => {
     var address = $("#address").val()
     var status = $("#status").val()
 
+    var url = "https://web-programming-assignment-2.onrender.com/submitForm"
+    // var url = "http://localhost:7000/submitForm"
+
     if (status == "default") {
       $("#result").text("Please select a status")
       return
@@ -14,7 +17,7 @@ $(() => {
 
     $.ajax({
       type: "POST",
-      url: "https://web-programming-assignment-2.onrender.com/submitForm",
+      url: url,
       data: {
         id: id,
         fullName: fullName,
@@ -23,7 +26,10 @@ $(() => {
       },
       success: (response) => {
         console.log(response)
+        $("#userInput").hide()
         $("#result").text(response)
+        $("#result").css("margin-top", "10%")
+        $("#return").show()
       },
       error: (error) => {
         $("#result").text(error)
